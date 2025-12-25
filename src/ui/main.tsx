@@ -1,6 +1,9 @@
 // Import polyfills first
 import "../polyfills";
 
+// Initialize i18n before React renders
+import "./i18n";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";

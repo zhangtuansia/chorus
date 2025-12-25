@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { supportedLanguages } from "@ui/i18n";
 import {
     Select,
     SelectContent,
@@ -1138,6 +1140,7 @@ interface Settings {
 }
 
 export default function Settings({ tab = "general" }: SettingsProps) {
+    const { t, i18n } = useTranslation();
     const settingsManager = SettingsManager.getInstance();
     const { mode, setMode, setSansFont, setMonoFont, sansFont } = useTheme();
     const [apiKeys, setApiKeys] = useState<Record<string, string>>({});
@@ -1549,6 +1552,44 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                                     >
                                                         {font.label}
                                                     </span>
+                                                </SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+
+                                <div>
+                                    <label
+                                        htmlFor="language-selector"
+                                        className="block font-semibold mb-2"
+                                    >
+                                        {t("settings.general.language")}
+                                    </label>
+                                    <p className="text-sm text-muted-foreground mb-2">
+                                        {t(
+                                            "settings.general.languageDescription",
+                                        )}
+                                    </p>
+                                    <Select
+                                        onValueChange={(value) => {
+                                            void i18n.changeLanguage(value);
+                                        }}
+                                        value={i18n.language}
+                                    >
+                                        <SelectTrigger
+                                            id="language-selector"
+                                            className="w-full"
+                                        >
+                                            <SelectValue placeholder="Select language" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            {supportedLanguages.map((lang) => (
+                                                <SelectItem
+                                                    key={lang.code}
+                                                    value={lang.code}
+                                                >
+                                                    {lang.nativeName} (
+                                                    {lang.name})
                                                 </SelectItem>
                                             ))}
                                         </SelectContent>
