@@ -1429,14 +1429,12 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                         <div className="space-y-6 max-w-2xl">
                             <div>
                                 <h2 className="text-2xl font-semibold mb-2">
-                                    General
+                                    {t("settings.general.title")}
                                 </h2>
                             </div>
                             <div className="space-y-4">
                                 <p className="text-sm text-muted-foreground">
-                                    Chorus requires you to bring your own API
-                                    keys to use AI models. Add your keys in the
-                                    API Keys tab.
+                                    {t("settings.general.apiKeysDescription")}
                                 </p>
                                 <div className="flex gap-2">
                                     <Button
@@ -1444,7 +1442,7 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                         size="sm"
                                         onClick={() => setActiveTab("api-keys")}
                                     >
-                                        Configure API Keys
+                                        {t("settings.general.configureApiKeys")}
                                     </Button>
                                     <Button
                                         variant="ghost"
@@ -1452,15 +1450,15 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                         onClick={() => void showOnboarding()}
                                     >
                                         <BookOpen className="h-4 w-4 mr-2" />
-                                        Restart Onboarding
+                                        {t("settings.general.restartOnboarding")}
                                     </Button>
                                 </div>
                                 <p className="text-sm text-muted-foreground flex items-center flex-wrap gap-1">
-                                    Send us
+                                    {t("settings.general.feedbackText")}
                                     <FeedbackButton className="underline hover:no-underline">
-                                        feedback
+                                        {t("settings.general.feedback")}
                                     </FeedbackButton>
-                                    anytime, or
+                                    {t("settings.general.anytime")}
                                     <button
                                         className="underline hover:no-underline"
                                         onClick={() => {
@@ -1469,9 +1467,9 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                             );
                                         }}
                                     >
-                                        book a call
+                                        {t("settings.general.bookCall")}
                                     </button>
-                                    with the founders.
+                                    {t("settings.general.withFounders")}
                                 </p>
                             </div>
 
@@ -1483,7 +1481,7 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                         htmlFor="theme-selector"
                                         className="block  font-semibold mb-2"
                                     >
-                                        Theme
+                                        {t("settings.general.theme")}
                                     </label>
                                     <Select
                                         onValueChange={(value) =>
@@ -1499,14 +1497,20 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                         </SelectTrigger>
                                         <SelectContent>
                                             <SelectItem value="default-system">
-                                                System
+                                                {t(
+                                                    "settings.general.themeSystem",
+                                                )}
                                             </SelectItem>
                                             <Separator />
                                             <SelectItem value="default-light">
-                                                Light
+                                                {t(
+                                                    "settings.general.themeLight",
+                                                )}
                                             </SelectItem>
                                             <SelectItem value="default-dark">
-                                                Dark
+                                                {t(
+                                                    "settings.general.themeDark",
+                                                )}
                                             </SelectItem>
                                         </SelectContent>
                                     </Select>
@@ -1517,7 +1521,7 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                         htmlFor="sans-font"
                                         className="block font-semibold mb-2"
                                     >
-                                        Sans Font
+                                        {t("settings.general.sansFont")}
                                     </label>
                                     <Select
                                         onValueChange={(value) =>
@@ -1599,12 +1603,14 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                 <div className="flex items-center justify-between pt-6">
                                     <div className="space-y-0.5">
                                         <div className="font-semibold ">
-                                            Auto-convert long text
+                                            {t(
+                                                "settings.general.autoConvertLongText",
+                                            )}
                                         </div>
                                         <div className=" ">
-                                            Automatically convert pasted text
-                                            longer than 5000 characters to a
-                                            file attachment
+                                            {t(
+                                                "settings.general.autoConvertLongTextDescription",
+                                            )}
                                         </div>
                                     </div>
                                     <Switch
@@ -1620,11 +1626,14 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                 <div className="flex items-center justify-between">
                                     <div className="space-y-0.5">
                                         <div className="font-semibold ">
-                                            Auto-scrape URLs
+                                            {t(
+                                                "settings.general.autoScrapeUrls",
+                                            )}
                                         </div>
                                         <div className=" ">
-                                            Automatically scrape and attach
-                                            content from URLs in your messages
+                                            {t(
+                                                "settings.general.autoScrapeUrlsDescription",
+                                            )}
                                         </div>
                                     </div>
                                     <Switch
@@ -1640,11 +1649,14 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                 <div className="flex items-center justify-between pt-2">
                                     <div className="space-y-0.5">
                                         <div className="font-semibold ">
-                                            Cautious Enter key
+                                            {t(
+                                                "settings.general.cautiousEnter",
+                                            )}
                                         </div>
                                         <div className=" ">
-                                            Use Cmd+Enter to send messages
-                                            instead of Enter
+                                            {t(
+                                                "settings.general.cautiousEnterDescription",
+                                            )}
                                         </div>
                                     </div>
                                     <Switch
@@ -1660,11 +1672,14 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                 <div className="flex items-center justify-between pt-2">
                                     <div className="space-y-0.5">
                                         <div className="font-semibold ">
-                                            Show message cost
+                                            {t(
+                                                "settings.general.showMessageCost",
+                                            )}
                                         </div>
                                         <div className=" ">
-                                            Display cost estimates alongside
-                                            messages and in the sidebar
+                                            {t(
+                                                "settings.general.showMessageCostDescription",
+                                            )}
                                         </div>
                                     </div>
                                     <Switch
@@ -1684,11 +1699,10 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                         <div className="space-y-6 max-w-2xl">
                             <div>
                                 <h2 className="text-2xl font-semibold mb-2">
-                                    Import Chat History
+                                    {t("settings.import.title")}
                                 </h2>
                                 <p className="text-muted-foreground text-sm">
-                                    Import your conversation history from other
-                                    AI chat platforms.
+                                    {t("settings.import.description")}
                                 </p>
                             </div>
                             <div className="space-y-4">
@@ -1702,7 +1716,7 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                         className="flex items-center gap-2"
                                     >
                                         <SiOpenai className="h-4 w-4" />
-                                        Import from OpenAI
+                                        {t("settings.import.importFromOpenAI")}
                                     </Button>
                                     <Button
                                         variant="outline"
@@ -1713,7 +1727,9 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                         className="flex items-center gap-2"
                                     >
                                         <RiClaudeFill className="h-4 w-4" />
-                                        Import from Anthropic
+                                        {t(
+                                            "settings.import.importFromAnthropic",
+                                        )}
                                     </Button>
                                 </div>
                             </div>
@@ -1724,12 +1740,10 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                         <div className="space-y-6 max-w-2xl">
                             <div>
                                 <h2 className="text-2xl font-semibold mb-2">
-                                    System Prompt
+                                    {t("settings.systemPrompt.title")}
                                 </h2>
                                 <p className="text-muted-foreground text-sm">
-                                    All AIs will see this prompt. Use it to
-                                    control their tone, role, or conversation
-                                    style.
+                                    {t("settings.systemPrompt.description")}
                                 </p>
                             </div>
                             <div className="space-y-4">
@@ -1738,7 +1752,9 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                     onChange={(e) =>
                                         setUniversalSystemPrompt(e.target.value)
                                     }
-                                    placeholder="Enter your custom system prompt..."
+                                    placeholder={t(
+                                        "settings.systemPrompt.placeholder",
+                                    )}
                                     rows={30}
                                     className="w-full font-mono text-sm resize-y min-h-[200px]"
                                 />
@@ -1763,7 +1779,9 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                                             );
                                         }}
                                     >
-                                        Reset to default
+                                        {t(
+                                            "settings.systemPrompt.resetToDefault",
+                                        )}
                                     </Button>
                                 </div>
                             </div>
@@ -1774,12 +1792,10 @@ export default function Settings({ tab = "general" }: SettingsProps) {
                         <div className="space-y-6 max-w-2xl">
                             <div>
                                 <h2 className="text-2xl font-semibold mb-2">
-                                    API Keys
+                                    {t("settings.apiKeys.title")}
                                 </h2>
                                 <p className="text-sm text-muted-foreground">
-                                    Enter your API keys for the providers you
-                                    want to use. Models for each provider will
-                                    become available once you add a valid key.
+                                    {t("settings.apiKeys.description")}
                                 </p>
                             </div>
                             <div className="space-y-4">
