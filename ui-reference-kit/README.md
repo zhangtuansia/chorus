@@ -11,6 +11,7 @@ ui-reference-kit/
 │   ├── feature-components/  # Main app feature components
 │   ├── renderers/      # Message content renderers (markdown, code, etc.)
 │   ├── hooks/          # Custom React hooks
+│   ├── gc-prototype/   # Group chat prototype (experimental)
 │   └── unused/         # Deprecated/unused components
 ├── specs/              # Specifications and architecture docs
 │   ├── coding-standards/    # Coding style and conventions
@@ -18,6 +19,13 @@ ui-reference-kit/
 ├── styles/             # Styling and theming
 │   ├── themes/         # Theme definitions
 │   └── utilities/      # Utility functions and helpers
+├── config/             # Configuration files
+│   ├── package.json    # Dependencies and scripts
+│   ├── eslint.config.mjs    # ESLint configuration
+│   ├── .prettierrc     # Prettier configuration
+│   ├── vite.config.ts  # Vite build configuration
+│   └── CONFIG_GUIDE.md # Configuration documentation
+├── screenshots/        # Visual reference images
 └── examples/           # Example usage and main app structure
 ```
 
@@ -306,11 +314,45 @@ toast.error("Error message");
 toast.info("Info message");
 ```
 
+## 📸 Visual Reference
+
+### Screenshots
+See [SCREENSHOTS.md](./SCREENSHOTS.md) for detailed descriptions of UI screenshots:
+- Empty chat view
+- Active conversation
+- Model picker interface
+- Tools/connections management
+- Quick chat (ambient chat)
+
+Screenshots are available in the `screenshots/` directory for visual reference.
+
+## ⚙️ Configuration
+
+### Configuration Files
+See [config/CONFIG_GUIDE.md](./config/CONFIG_GUIDE.md) for detailed configuration documentation:
+- **package.json** - Dependencies and scripts
+- **eslint.config.mjs** - Code quality rules
+- **.prettierrc** - Code formatting
+- **vite.config.ts** - Build configuration
+- **tsconfig.json** - TypeScript settings
+- **tailwind.config.cjs** - Styling configuration
+
+## 🧪 Experimental Components
+
+### Group Chat Prototype (`components/gc-prototype/`)
+Experimental components for group chat feature (not yet released):
+- `GroupChat.tsx` - Group chat interface
+- `GroupChatThread.tsx` - Thread view
+- `CollapsibleMessage.tsx` - Collapsible messages
+
+**Note:** These are prototype components and may not be fully functional.
+
 ## 📚 Additional Resources
 
 - **Main Docs**: See `CLAUDE.md` in project root
 - **Schema**: See `SCHEMA.md` for database schema
-- **Screenshots**: `screenshots/` directory for visual reference
+- **Screenshots**: See [SCREENSHOTS.md](./SCREENSHOTS.md) for visual reference
+- **Configuration**: See [config/CONFIG_GUIDE.md](./config/CONFIG_GUIDE.md) for setup
 
 ## 🚀 Getting Started
 

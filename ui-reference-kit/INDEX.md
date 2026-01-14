@@ -13,6 +13,10 @@ Quick navigation to all documentation and resources in this UI reference kit.
 - **[specs/coding-standards/CODING_STANDARDS.md](./specs/coding-standards/CODING_STANDARDS.md)** - Complete coding standards
 - **[specs/UI_PATTERNS.md](./specs/UI_PATTERNS.md)** - Common UI patterns and best practices
 
+### Visual & Configuration
+- **[SCREENSHOTS.md](./SCREENSHOTS.md)** - Visual reference with UI screenshots
+- **[config/CONFIG_GUIDE.md](./config/CONFIG_GUIDE.md)** - Configuration files documentation
+
 ## 📁 Component Directories
 
 ### Base UI Components
@@ -65,6 +69,14 @@ Reusable React hooks:
 
 **[View all 12 hooks →](./COMPONENT_INVENTORY.md#custom-hooks-12-hooks)**
 
+### Experimental Components
+**Location:** `components/gc-prototype/`
+
+Group chat prototype (experimental):
+- `GroupChat.tsx` - Group chat interface
+- `GroupChatThread.tsx` - Thread view
+- `CollapsibleMessage.tsx` - Collapsible messages
+
 ## 🎨 Styles & Theming
 
 ### Theme System
@@ -106,6 +118,34 @@ Reusable React hooks:
 - React context definitions
 - State management patterns
 
+## ⚙️ Configuration
+
+### Configuration Files
+**Location:** `config/`
+
+- **package.json** - Dependencies and npm scripts
+- **eslint.config.mjs** - ESLint rules and configuration
+- **.prettierrc** - Prettier formatting settings
+- **vite.config.ts** - Vite build tool configuration
+- **tsconfig.json** - TypeScript compiler settings
+- **tailwind.config.cjs** - Tailwind CSS configuration
+
+**[View configuration guide →](./config/CONFIG_GUIDE.md)**
+
+## 📸 Visual Reference
+
+### Screenshots
+**Location:** `screenshots/`
+
+Five UI screenshots for visual reference:
+1. **Empty Chat View** - Initial state
+2. **Active Chat** - Conversation in progress
+3. **Model Picker** - Model selection interface
+4. **Tools/Connections** - MCP tools management
+5. **Quick Chat** - Ambient chat window
+
+**[View screenshot descriptions →](./SCREENSHOTS.md)**
+
 ## 📚 Documentation by Topic
 
 ### For New Developers
@@ -146,12 +186,15 @@ Need to check a standard? See:
 
 ## 📊 Statistics
 
-- **Total Components**: 114
+- **Total Components**: 117 (114 + 3 experimental)
 - **Base UI**: 47 components
 - **Feature Components**: 42 components
 - **Renderers**: 9 components
 - **Custom Hooks**: 12 hooks
-- **Documentation Pages**: 6 pages
+- **Experimental**: 3 components (gc-prototype)
+- **Documentation Pages**: 8 pages
+- **Screenshots**: 5 UI reference images
+- **Configuration Files**: 6 files
 
 ## 🎯 Common Tasks
 
@@ -167,6 +210,8 @@ Need to check a standard? See:
 | Add navigation | [UI_PATTERNS.md](./specs/UI_PATTERNS.md#navigation-patterns) |
 | Loading states | [UI_PATTERNS.md](./specs/UI_PATTERNS.md#loading-states) |
 | Error handling | [UI_PATTERNS.md](./specs/UI_PATTERNS.md#error-states) |
+| Setup configuration | [CONFIG_GUIDE.md](./config/CONFIG_GUIDE.md) |
+| View UI examples | [SCREENSHOTS.md](./SCREENSHOTS.md) |
 
 ## 🔗 External Resources
 
